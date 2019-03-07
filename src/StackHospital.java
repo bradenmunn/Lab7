@@ -1,10 +1,14 @@
 import java.util.EmptyStackException;
-import java.util.LinkedList;
 import java.util.Stack;
 
 public class StackHospital<PatientType>  extends Hospital<PatientType>{
 	
 	private Stack<PatientType> patientsLIFO;
+	
+	public StackHospital()
+	{
+		patientsLIFO = new Stack<PatientType>();
+	}
 	
 	/**
 	 * Add a patient to the Hospital.
@@ -55,7 +59,7 @@ public class StackHospital<PatientType>  extends Hospital<PatientType>{
 	 */
 	public String hospitalType()
 	{
-		//TODO
+		return "StackHospital";
 	}
 
 	/**
