@@ -1,11 +1,16 @@
 import java.util.EmptyStackException;
 import java.util.LinkedList;
-import java.util.Stack;
+import java.util.Queue;
 
-public class StackHospital<PatientType>  extends Hospital<PatientType>{
+public class QueueHospital<PatientType> extends Hospital<PatientType>{
 	
-	private Stack<PatientType> patientsLIFO;
+	private Queue<PatientType> patientsFIFO;
 	
+	
+	public QueueHospital()
+	{
+		patientsFIFO = new LinkedList<PatientType>();
+	}
 	/**
 	 * Add a patient to the Hospital.
 	 *
@@ -13,7 +18,7 @@ public class StackHospital<PatientType>  extends Hospital<PatientType>{
 	 */
 	public void addPatient(PatientType patient)
 	{
-		patientsLIFO.add(patient);
+		patientsFIFO.add(patient);
 	}
 
 	/**
@@ -24,7 +29,7 @@ public class StackHospital<PatientType>  extends Hospital<PatientType>{
 	 */
 	public PatientType nextPatient()
 	{
-		return patientsLIFO.peek();
+		return patientsFIFO.peek();
 	}
 
 	/**
@@ -33,9 +38,9 @@ public class StackHospital<PatientType>  extends Hospital<PatientType>{
 	 *
 	 * @return The patient receiving treatment.
 	 */
-	public PatientType treatNextPatient() throws EmptyStackException
+	public PatientType treatNextPatient()
 	{
-		return patientsLIFO.pop();
+		return patientsFIFO.poll();
 	}
 
 	/**
@@ -45,7 +50,7 @@ public class StackHospital<PatientType>  extends Hospital<PatientType>{
 	 */
 	public int numPatients()
 	{
-		return patientsLIFO.size();
+		return patientsFIFO.size();
 	}
 
 	/**
@@ -66,7 +71,7 @@ public class StackHospital<PatientType>  extends Hospital<PatientType>{
 	public String allPatientInfo()
 	{
 		String result = "";
-		for(PatientType patient: patientsLIFO)
+		for(PatientType patient: patientsFIFO)
 		{
 			result += (patient.toString());
 		}
