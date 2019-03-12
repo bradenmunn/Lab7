@@ -1,4 +1,3 @@
-import java.util.EmptyStackException;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -60,7 +59,7 @@ public class QueueHospital<PatientType> extends Hospital<PatientType>{
 	 */
 	public String hospitalType()
 	{
-		return "QueueHospital";
+		return "PriorityQueueHospital";
 	}
 
 	/**
