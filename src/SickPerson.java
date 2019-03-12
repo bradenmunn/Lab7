@@ -14,7 +14,7 @@ public class SickPerson extends Person{
 	{
 		int result = 0;
 		
-		if(p instanceof SickPerson )
+		if(p instanceof SickPerson)
 		{
 			if(this.getName().compareToIgnoreCase(p.getName()) > 0)
 			{
