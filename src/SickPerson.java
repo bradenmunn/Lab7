@@ -12,25 +12,25 @@ public class SickPerson extends Person{
 	@Override
 	protected int compareToImpl(Person p)
 	{
-		int result = 0;
-		
-		if(p instanceof SickPerson)
+		if(!(p instanceof SickPerson))
 		{
-			if(this.getName().compareToIgnoreCase(p.getName()) > 0)
-			{
-				result =  1;
-			}
-			else if(this.getName().compareToIgnoreCase(p.getName()) < 0)
-			{
-				result = -1;
-			}
+			return 0;
 		}
 		else
 		{
-			result = 0; // If not HealthyPerson or if names are equal
+			if(this.severity < ((SickPerson)p).severity)
+			{
+				return 1;
+			}
+			else if(this.severity > ((SickPerson)p).severity)
+			{
+				return -1;
+			}
+			else // Names match
+			{
+				return 0;
+			}
 		}
-		
-		return result;
 	}
 	
 	@Override

@@ -16,7 +16,7 @@ public class PatientsTest {
 		Assert.assertEquals(-1, h1.compareToImpl(h3));
 		Assert.assertEquals(1, h3.compareToImpl(h1));
 		Assert.assertEquals(0, h1.compareToImpl(s1));
-		Assert.assertEquals("Braden, a 19-year old. Is in for Fracture", h1.toString());
+		Assert.assertEquals("Braden, a 19-year old. In for Fracture", h1.toString());
 	}
 	
 	// Tests for SickPerson class
@@ -24,13 +24,13 @@ public class PatientsTest {
 	public void sickTest()
 	{
 		SickPerson s1 = new SickPerson("Gabe", 19, 5);
-		SickPerson s2 = new SickPerson("Gabe", 50, 3);
-		SickPerson s3 = new SickPerson("Alex", 19, 2);
+		SickPerson s2 = new SickPerson("Will", 50, 5);
+		SickPerson s3 = new SickPerson("Alex", 19, 3);
 		HealthyPerson h1 = new HealthyPerson("Braden", 19, "Fracture");
 		
 		Assert.assertEquals(0, s1.compareToImpl(s2));
-		Assert.assertEquals(-1, s3.compareToImpl(s1));
-		Assert.assertEquals(1, s1.compareToImpl(s3));
+		Assert.assertEquals(1, s3.compareToImpl(s1));
+		Assert.assertEquals(-1, s1.compareToImpl(s3));
 		Assert.assertEquals(0, s1.compareToImpl(h1));
 		Assert.assertEquals("Gabe, a 19-year old. Severity level 5", s1.toString());
 	}

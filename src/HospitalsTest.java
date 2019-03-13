@@ -50,11 +50,11 @@ public class HospitalsTest {
     	Assert.assertEquals("Wrong hospital type", "PriorityQueueHospital", personPQueue.hospitalType());
     	
     	// Tests allPatientInfo()
-    	Assert.assertEquals("Incorrect toString()", "Adam, a 27-year old. Is in for WristHana, a 12-year old. Severity level 5", 
+    	Assert.assertEquals("Incorrect toString()", "Adam, a 27-year old. In for WristHana, a 12-year old. Severity level 5", 
     			personStack.allPatientInfo());
-    	Assert.assertEquals("Inocorrect toString()", "Hana, a 12-year old. Severity level 5Jake, a 24-year old. Is in for Headache", 
+    	Assert.assertEquals("Inocorrect toString()", "Hana, a 12-year old. Severity level 5Jake, a 24-year old. In for Headache", 
     			personQueue.allPatientInfo());
-    	Assert.assertEquals("Inocorrect toString()", "Jake, a 24-year old. Is in for HeadacheHana, a 12-year old. Severity level 5", 
+    	Assert.assertEquals("Inocorrect toString()", "Jake, a 24-year old. In for HeadacheHana, a 12-year old. Severity level 5", 
     			personPQueue.allPatientInfo());
     	
 	}
@@ -114,6 +114,10 @@ public class HospitalsTest {
     	Assert.assertEquals("Inocorrect toString()", "A 8-year old Retriever.A 5-year old Pug.", 
     			animalPQueue.allPatientInfo());
     	
+    	// Tests Hospital class toString
+    	Assert.assertEquals("Incorrect toString()", "A StackHospital-type hospital with 2 patients.", animalStack.toString());
+    	Assert.assertEquals("Incorrect toString()", "A QueueHospital-type hospital with 2 patients.", animalQueue.toString());
+    	Assert.assertEquals("Incorrect toString()", "A PriorityQueueHospital-type hospital with 2 patients.", animalPQueue.toString());
     	
 	}
 

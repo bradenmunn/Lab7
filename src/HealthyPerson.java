@@ -18,13 +18,13 @@ public class HealthyPerson extends Person{
 		}
 		else
 		{
-			if(this.getName().compareToIgnoreCase(p.getName()) > 0)
-			{
-				return 1;
-			}
-			else if(this.getName().compareToIgnoreCase(p.getName()) < 0)
+			if(this.getName().compareToIgnoreCase(p.getName()) < 0)
 			{
 				return -1;
+			}
+			else if(this.getName().compareToIgnoreCase(p.getName()) > 0)
+			{
+				return 1;
 			}
 			else // Names match
 			{
@@ -36,6 +36,6 @@ public class HealthyPerson extends Person{
 	@Override
 	public String toString()
 	{
-		return String.format("%s Is in for %s", super.toString(), this.reason);
+		return String.format("%s In for %s", super.toString(), this.reason);
 	}
 }
