@@ -5,7 +5,7 @@ public class PatientsTest {
 	
 	// Tests for HealthyPerson class
 	@Test
-	public void HealthyTest()
+	public void healthyTest()
 	{
 		HealthyPerson h1 = new HealthyPerson("Braden", 19, "Fracture");
 		HealthyPerson h2 = new HealthyPerson("Braden", 22, "Check-up");
@@ -21,7 +21,7 @@ public class PatientsTest {
 	
 	// Tests for SickPerson class
 	@Test
-	public void SickTest()
+	public void sickTest()
 	{
 		SickPerson s1 = new SickPerson("Gabe", 19, 5);
 		SickPerson s2 = new SickPerson("Gabe", 50, 3);
@@ -37,7 +37,7 @@ public class PatientsTest {
 	
 	// Tests for Animal class
 	@Test
-	public void AnimalTest()
+	public void animalTest()
 	{
 		Animal a1 = new Animal("Beagle", 8);
 		Animal a2 = new Animal("Retriever", 8);

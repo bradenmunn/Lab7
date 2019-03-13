@@ -58,7 +58,7 @@ public class PriorityQueueHospital<PatientType> extends Hospital<PatientType> {
 	 */
 	public String hospitalType()
 	{
-		return "QueueHospital";
+		return "PriorityQueueHospital";
 	}
 
 	/**
@@ -68,6 +68,7 @@ public class PriorityQueueHospital<PatientType> extends Hospital<PatientType> {
 	 */
 	public String allPatientInfo()
 	{
+		
 		String result = "";
 		for(PatientType patient: patientsFIFO)
 		{
