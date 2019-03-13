@@ -16,7 +16,8 @@ Tasks:
 9. Tests for HealthyPerson class
 10. Tests for SickPerson class
 11. Tests for Animal class
-12. Tests for StackHospital class
+12. Tests for Person Hospitals
+13. Tests for Animal Hospitals
 
 Estimated Time (minutes):
 1. 5
@@ -30,7 +31,8 @@ Estimated Time (minutes):
 9. 25
 10. 20
 11. 10
-12. 20
+12. 30
+13. 20
 
 Actual Time (minutes):
 1. 3
@@ -44,5 +46,7 @@ Actual Time (minutes):
 9. 30
 10. 15
 11. 10
+12. 45
+13. 15
 
 */}
