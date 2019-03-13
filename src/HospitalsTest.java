@@ -44,7 +44,6 @@ public class HospitalsTest {
     	Assert.assertEquals("Wrong person treated", "Adam", personQueue.treatNextPatient().getName());
     	Assert.assertEquals("Wrong person treated", "Adam", personPQueue.treatNextPatient().getName());
     	
-    	//System.out.println(personPQueue.allPatientInfo());
     	// Tests hospitalType()
     	Assert.assertEquals("Wrong hospital type", "StackHospital", personStack.hospitalType());
     	Assert.assertEquals("Wrong hospital type", "QueueHospital", personQueue.hospitalType());
@@ -87,6 +86,33 @@ public class HospitalsTest {
     	animalPQueue.addPatient(a1);
     	animalPQueue.addPatient(a2);
     	animalPQueue.addPatient(a3);
+    	
+    	// Tests addPatient()
+    	Assert.assertEquals("Size is wrong", 3, animalStack.numPatients());
+    	Assert.assertEquals("Size is wrong", 3, animalQueue.numPatients());
+    	Assert.assertEquals("Size is wrong", 3, animalPQueue.numPatients());
+    	
+    	// Tests nextPatient()
+    	Assert.assertEquals("Wrong next patient", "Pug", animalStack.nextPatient().getBreed());
+    	Assert.assertEquals("Wrong next patient", "Beagle", animalQueue.nextPatient().getBreed());
+    	Assert.assertEquals("Wrong next patient", "Beagle", animalPQueue.nextPatient().getBreed());
+    	
+    	// Tests treatNextPatient()
+    	Assert.assertEquals("Wrong person treated", "Pug", animalStack.treatNextPatient().getBreed());
+    	Assert.assertEquals("Wrong person treated", "Beagle", animalQueue.treatNextPatient().getBreed());
+    	Assert.assertEquals("Wrong person treated", "Beagle", animalPQueue.treatNextPatient().getBreed());
+    	
+    	// Tests hospitalType()
+    	Assert.assertEquals("Wrong hospital type", "StackHospital", animalStack.hospitalType());
+    	Assert.assertEquals("Wrong hospital type", "QueueHospital", animalQueue.hospitalType());
+    	Assert.assertEquals("Wrong hospital type", "PriorityQueueHospital", animalPQueue.hospitalType());
+    	
+    	// Tests allPatientInfo()
+    	Assert.assertEquals("Incorrect toString()", "A 8-year old Beagle.A 8-year old Retriever.", animalStack.allPatientInfo());
+    	Assert.assertEquals("Inocorrect toString()", "A 8-year old Retriever.A 5-year old Pug.", 
+    			animalQueue.allPatientInfo());
+    	Assert.assertEquals("Inocorrect toString()", "A 8-year old Retriever.A 5-year old Pug.", 
+    			animalPQueue.allPatientInfo());
     	
     	
 	}
